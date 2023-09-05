@@ -51,7 +51,8 @@ optional string company-slogan:
 -- front.front: $card.name
 company-name: $card.company-name
 title: $card.title
-phone-no: $card.phone-no
+contact-1: $card.contact-1
+contact-2: $card.contact-2
 email: $card.email
 address: $card.address
 logo: $card.logo

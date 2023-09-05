@@ -2,7 +2,8 @@
 caption name:
 optional string company-name:
 optional string title:
-optional string phone-no:
+optional string contact-1:
+optional string contact-2:
 optional string email:
 optional string address:
 optional ftd.image-src logo:
@@ -76,7 +77,7 @@ white-space: nowrap
 -- end: ftd.row
 
 -- ftd.row:
-if: { front.phone-no != NULL }
+if: { front.contact-1 != NULL }
 width: fill-container
 align-content: center
 spacing.fixed.px: 24
@@ -95,7 +96,7 @@ border-radius.px: 10
 
 -- end: ftd.row
 
--- ftd.text: $front.phone-no
+-- ftd.text: $front.contact-1
 role: $inherited.types.fine-print
 min-width.fixed.percent: 30
 white-space: nowrap
