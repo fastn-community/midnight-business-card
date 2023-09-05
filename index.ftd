@@ -27,14 +27,10 @@ caption name:
 string title:
 string company-name:
 ftd.image-src logo:
-optional string phone-no:
 optional string contact-1:
-optional string contact-2:
 optional string email:
 optional string website:
 optional string address:
-optional ftd.image-src qr-code:
-optional ftd.image-src avatar:
 optional string company-slogan:
 
 -- lib.display-card:
@@ -52,13 +48,10 @@ optional string company-slogan:
 company-name: $card.company-name
 title: $card.title
 contact-1: $card.contact-1
-contact-2: $card.contact-2
 email: $card.email
 address: $card.address
 logo: $card.logo
-avatar: $card.avatar
 company-slogan: $card.company-slogan
-qr-code: $card.qr-code
 website: $card.website
 
 ;; =============================================================================

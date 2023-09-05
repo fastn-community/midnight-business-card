@@ -3,13 +3,10 @@ caption name:
 optional string company-name:
 optional string title:
 optional string contact-1:
-optional string contact-2:
 optional string email:
 optional string address:
 optional ftd.image-src logo:
-optional ftd.image-src avatar:
 optional string company-slogan:
-optional ftd.image-src qr-code:
 optional string website:
 
 -- ftd.column:
@@ -22,16 +19,6 @@ height.fixed.px: 350
 background.solid: #19213D
 align-content: center
 color: #FFFFFF
-
--- ftd.image:
-if: { front.qr-code != NULL }
-src: $front.qr-code
-width.fixed.px: 64
-height.fixed.px: 64
-anchor: parent
-right.px: 12
-top.px: 12
-z-index: 2
 
 -- ftd.column:
 width: fill-container
