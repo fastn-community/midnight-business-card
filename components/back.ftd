@@ -1,4 +1,4 @@
--- import: fastn-community.github.io/midnight-business-card/lib
+-- import: fastn-community.github.io/midnight-business-card/components/lib
 
 -- component back:
 optional caption name:
