@@ -1,0 +1,51 @@
+-- import: fastn-community.github.io/midnight-business-card/lib
+
+-- component back:
+optional caption name:
+optional string company-name:
+optional string title:
+optional string phone-no:
+optional string email:
+optional string address:
+optional ftd.image-src logo:
+optional ftd.image-src avatar:
+optional string company-slogan:
+optional ftd.image-src qr-code:
+optional string website:
+
+-- ftd.column:
+width: fill-container
+overflow: auto
+
+-- ftd.row:
+width.fixed.px: 700
+height.fixed.px: 350
+background.solid: #19213D
+spacing: space-around
+align-content: center
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+align-content: center
+background.image: $lib.bg-image
+
+-- ftd.image: $back.logo
+if: { back.logo != NULL }
+max-width.fixed.px: 250
+
+-- ftd.text: $back.company-slogan
+if: { back.company-slogan != NULL }
+role: $inherited.types.copy-regular
+color: $inherited.colors.text-strong
+width: fill-container
+text-align: center
+margin-top.px: 16
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: back
