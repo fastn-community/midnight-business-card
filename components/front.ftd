@@ -3,6 +3,7 @@ caption name:
 optional string company-name:
 optional string title:
 optional string contact-1:
+optional string contact-2:
 optional string email:
 optional string address:
 optional ftd.image-src logo:
