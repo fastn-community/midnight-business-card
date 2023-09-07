@@ -28,6 +28,7 @@ string title:
 string company-name:
 ftd.image-src logo:
 optional string contact-1:
+optional string contact-2:
 optional string email:
 optional string website:
 optional string address:
@@ -48,6 +49,7 @@ optional string company-slogan:
 company-name: $card.company-name
 title: $card.title
 contact-1: $card.contact-1
+contact-2: $card.contact-2
 email: $card.email
 address: $card.address
 logo: $card.logo

@@ -11,8 +11,8 @@ optional string company-slogan:
 optional string website:
 
 -- ftd.column:
-width.fixed.px: 700
-height.fixed.px: 350
+width: fill-container
+height: fill-container
 background.solid: #19213D
 align-content: center
 color: #FFFFFF
@@ -30,7 +30,7 @@ margin-top.px: 12
 
 -- ftd.column:
 width: fill-container
-spacing.fixed.px: 24
+spacing.fixed.px: 20
 margin-top.px: 34
 
 -- ftd.row:
@@ -81,6 +81,33 @@ border-radius.px: 10
 -- end: ftd.row
 
 -- ftd.text: $front.contact-1
+role: $inherited.types.fine-print
+min-width.fixed.percent: 30
+white-space: nowrap
+
+-- end: ftd.row
+
+-- ftd.row:
+if: { front.contact-2 != NULL }
+width: fill-container
+align-content: center
+spacing.fixed.px: 24
+padding-horizontal.px: 90
+
+-- ftd.text: Phone:
+role: $inherited.types.fine-print
+min-width.fixed.percent: 20
+
+-- ftd.row:
+width: fill-container
+align-self: center
+height.fixed.px: 1
+background.solid: #ebeff68c
+border-radius.px: 10
+
+-- end: ftd.row
+
+-- ftd.text: $front.contact-2
 role: $inherited.types.fine-print
 min-width.fixed.percent: 30
 white-space: nowrap
