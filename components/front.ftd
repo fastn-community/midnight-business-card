@@ -10,10 +10,6 @@ optional string company-slogan:
 optional string website:
 
 -- ftd.column:
-width: fill-container
-overflow: auto
-
--- ftd.column:
 width.fixed.px: 700
 height.fixed.px: 350
 background.solid: #19213D
@@ -141,8 +137,6 @@ role: $inherited.types.fine-print
 min-width.fixed.percent: 30
 
 -- end: ftd.row
-
--- end: ftd.column
 
 -- end: ftd.column
 

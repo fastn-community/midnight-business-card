@@ -18,8 +18,8 @@ width: fill-container
 overflow: auto
 
 -- ftd.row:
-width.fixed.px: 700
-height.fixed.px: 350
+width: fill-container
+height: fill-container
 background.solid: #19213D
 spacing: space-around
 align-content: center
@@ -31,7 +31,6 @@ align-content: center
 background.image: $lib.bg-image
 
 -- ftd.image: $back.logo
-if: { back.logo != NULL }
 max-width.fixed.px: 250
 
 -- ftd.text: $back.company-slogan
