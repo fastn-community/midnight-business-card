@@ -1,7 +1,8 @@
 -- import: fastn-community.github.io/business-card/docs
 -- import: fastn-community.github.io/business-card as lib
 -- import:  fastn-community.github.io/midnight-business-card
-
+-- import: fastn-community.github.io/midnight-business-card/components/front
+-- import: fastn-community.github.io/midnight-business-card/components/back
 
 
 
@@ -24,14 +25,12 @@ category: fastn-community.github.io/midnight-business-card
 -- component card:
 caption name:
 string title:
-string company-name:
 ftd.image-src logo:
 optional string contact-1:
 optional string contact-2:
 optional string email:
 optional string website:
 optional string address:
-optional string company-slogan:
 
 -- lib.display-card:
 ;; Remove the comment below if your card is in portrait mode.
@@ -44,12 +43,14 @@ optional string company-slogan:
 ;; ===============<IMPLEMENT THE FRONT SIDE OF BUSINESS CARD>===================
 ;; =============================================================================
 
--- ftd.text: Implement the **FRONT** side of business card
-color: $inherited.colors.text
-background.solid: $inherited.colors.background.step-2
-width: fill-container
-height: fill-container
-text-align: center
+-- front.front: $card.name
+title: $card.title
+contact-1: $card.contact-1
+contact-2: $card.contact-2
+email: $card.email
+address: $card.address
+logo: $card.logo
+website: $card.website
 
 ;; =============================================================================
 ;; ================================== END ======================================
@@ -63,12 +64,8 @@ text-align: center
 ;; ===============<IMPLEMENT THE BACK SIDE OF BUSINESS CARD>===================
 ;; =============================================================================
 
--- ftd.text: Implement the **BACK** side of business card
-color: $inherited.colors.text
-background.solid: $inherited.colors.background.step-2
-width: fill-container
-height: fill-container
-text-align: center
+-- back.back: $card.name
+logo: $card.logo
 
 ;; =============================================================================
 ;; ================================== END ======================================

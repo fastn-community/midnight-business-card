@@ -1,0 +1,36 @@
+-- import: fastn-community.github.io/midnight-business-card/components/lib
+
+-- component back:
+optional caption name:
+ftd.image-src logo:
+optional string company-slogan:
+
+-- ftd.row:
+width: fill-container
+height: fill-container
+background.solid: #19213D
+spacing: space-around
+align-content: center
+
+-- ftd.column:
+width: fill-container
+height: fill-container
+align-content: center
+background.image: $lib.bg-image
+
+-- ftd.image: $back.logo
+max-width.fixed.px: 250
+
+-- ftd.text: $back.company-slogan
+if: { back.company-slogan != NULL }
+role: $inherited.types.copy-regular
+color: #FFFFFF
+width: fill-container
+text-align: center
+margin-top.px: 16
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: back

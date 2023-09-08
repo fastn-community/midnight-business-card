@@ -1,0 +1,6 @@
+
+-- ftd.background-image bg-image:
+src: $assets.files.assets.bg-back.svg
+repeat: no-repeat
+position: center
+size: contain
