@@ -5,11 +5,6 @@ optional caption name:
 ftd.image-src logo:
 optional string company-slogan:
 
--- ftd.column:
-width: fill-container
-height: fill-container
-overflow: auto
-
 -- ftd.row:
 width: fill-container
 height: fill-container
@@ -37,7 +32,5 @@ margin-top.px: 16
 -- end: ftd.column
 
 -- end: ftd.row
-
--- end: ftd.column
 
 -- end: back

@@ -25,14 +25,12 @@ category: fastn-community.github.io/midnight-business-card
 -- component card:
 caption name:
 string title:
-string company-name:
 ftd.image-src logo:
 optional string contact-1:
 optional string contact-2:
 optional string email:
 optional string website:
 optional string address:
-optional string company-slogan:
 
 -- lib.display-card:
 ;; Remove the comment below if your card is in portrait mode.
@@ -46,14 +44,12 @@ optional string company-slogan:
 ;; =============================================================================
 
 -- front.front: $card.name
-company-name: $card.company-name
 title: $card.title
 contact-1: $card.contact-1
 contact-2: $card.contact-2
 email: $card.email
 address: $card.address
 logo: $card.logo
-company-slogan: $card.company-slogan
 website: $card.website
 
 ;; =============================================================================
@@ -70,7 +66,6 @@ website: $card.website
 
 -- back.back: $card.name
 logo: $card.logo
-company-slogan: $card.company-slogan
 
 ;; =============================================================================
 ;; ================================== END ======================================

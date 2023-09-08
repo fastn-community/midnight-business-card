@@ -1,25 +1,19 @@
 -- component front:
 caption name:
-optional string company-name:
 optional string title:
 optional string contact-1:
 optional string contact-2:
 optional string email:
 optional string address:
 optional ftd.image-src logo:
-optional string company-slogan:
 optional string website:
 
 -- ftd.column:
-width: fill-container
 height: fill-container
-background.solid: #19213D
-align-content: center
-color: #FFFFFF
-
--- ftd.column:
 width: fill-container
 align-content: center
+background.solid: #19213D
+color: #FFFFFF
 
 -- ftd.text: $front.name
 role: $inherited.types.heading-large
@@ -33,143 +27,64 @@ width: fill-container
 spacing.fixed.px: 20
 margin-top.px: 34
 
--- ftd.row:
-if: { front.email != NULL }
-width: fill-container
-align-content: center
-spacing.fixed.px: 24
-padding-horizontal.px: 90
+-- info: Email:
+detail: $front.email
 
--- ftd.text: Email:
-role: $inherited.types.fine-print
-min-width.fixed.percent: 20
+-- info: Phone:
+detail: $front.contact-1
 
--- ftd.row:
-width: fill-container
-align-self: center
-height.fixed.px: 1
-background.solid: #ebeff68c
-border-radius.px: 10
+-- info: Phone:
+detail: $front.contact-2
 
--- end: ftd.row
+-- info: Address:
+detail: $front.address
 
--- ftd.text: $front.email
-role: $inherited.types.fine-print
-min-width.fixed.percent: 30
-white-space: nowrap
-
--- end: ftd.row
-
--- ftd.row:
-if: { front.contact-1 != NULL }
-width: fill-container
-align-content: center
-spacing.fixed.px: 24
-padding-horizontal.px: 90
-
--- ftd.text: Phone:
-role: $inherited.types.fine-print
-min-width.fixed.percent: 20
-
--- ftd.row:
-width: fill-container
-align-self: center
-height.fixed.px: 1
-background.solid: #ebeff68c
-border-radius.px: 10
-
--- end: ftd.row
-
--- ftd.text: $front.contact-1
-role: $inherited.types.fine-print
-min-width.fixed.percent: 30
-white-space: nowrap
-
--- end: ftd.row
-
--- ftd.row:
-if: { front.contact-2 != NULL }
-width: fill-container
-align-content: center
-spacing.fixed.px: 24
-padding-horizontal.px: 90
-
--- ftd.text: Phone:
-role: $inherited.types.fine-print
-min-width.fixed.percent: 20
-
--- ftd.row:
-width: fill-container
-align-self: center
-height.fixed.px: 1
-background.solid: #ebeff68c
-border-radius.px: 10
-
--- end: ftd.row
-
--- ftd.text: $front.contact-2
-role: $inherited.types.fine-print
-min-width.fixed.percent: 30
-white-space: nowrap
-
--- end: ftd.row
-
--- ftd.row:
-if: { front.address != NULL }
-width: fill-container
-align-content: center
-spacing.fixed.px: 24
-padding-horizontal.px: 90
-
--- ftd.text: Address:
-role: $inherited.types.fine-print
-min-width.fixed.percent: 20
-
--- ftd.row:
-width: fill-container
-align-self: center
-height.fixed.px: 1
-background.solid: #ebeff68c
-border-radius.px: 10
-
--- end: ftd.row
-
--- ftd.text: $front.address
-role: $inherited.types.fine-print
-min-width.fixed.percent: 30
-
--- end: ftd.row
-
--- ftd.row:
-if: { front.website != NULL }
-width: fill-container
-align-content: center
-spacing.fixed.px: 24
-padding-horizontal.px: 90
-
--- ftd.text: Website:
-role: $inherited.types.fine-print
-min-width.fixed.percent: 20
-
--- ftd.row:
-width: fill-container
-align-self: center
-height.fixed.px: 1
-background.solid: #ebeff68c
-border-radius.px: 10
-
--- end: ftd.row
-
--- ftd.text: $front.website
-role: $inherited.types.fine-print
-min-width.fixed.percent: 30
-
--- end: ftd.row
-
--- end: ftd.column
+-- info: Website:
+detail: $front.website
 
 -- end: ftd.column
 
 -- end: ftd.column
 
 -- end: front
+
+
+
+
+
+
+
+
+
+
+-- component info:
+caption title:
+optional string detail:
+
+-- ftd.row:
+if: { info.detail != NULL }
+width: fill-container
+align-content: center
+spacing.fixed.px: 24
+padding-horizontal.px: 90
+
+-- ftd.text: $info.title
+role: $inherited.types.fine-print
+min-width.fixed.percent: 20
+
+-- ftd.row:
+width: fill-container
+align-self: center
+height.fixed.px: 1
+background.solid: #ebeff68c
+border-radius.px: 10
+
+-- end: ftd.row
+
+-- ftd.text: $info.detail
+role: $inherited.types.fine-print
+min-width.fixed.percent: 30
+
+-- end: ftd.row
+
+-- end: info
